@@ -1,5 +1,5 @@
 {
-  "name": "re-require2",
+  "name": "re-require-module",
   "version": "1.0.0",
   "description": "Replacement for node.js require that that always reads the required module again from disk. It actually automatically uncaches it before requiring it again for you. This allows changes to become live without restarting node. It is like a simple hot require.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chanon/re-require2.git"
+    "url": "git+https://github.com/chanon/re-require-module.git"
   },
   "keywords": [
     "nodejs",
@@ -29,7 +29,7 @@
   "author": "Chanon Sajjamanochai <chanon.s@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chanon/re-require2/issues"
+    "url": "https://github.com/chanon/re-require-module/issues"
   },
-  "homepage": "https://github.com/chanon/re-require2#readme"
+  "homepage": "https://github.com/chanon/re-require-module#readme"
 }
