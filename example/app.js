@@ -1,5 +1,5 @@
 var http = require('http');
-var reRequire = require('re-require').reRequire;
+var reRequire = require('re-require2').reRequire;
 
 var server = http.createServer(function(req, res) {
 	// we reRequire inside this function so that everytime a request comes in, './handler' gets re-required

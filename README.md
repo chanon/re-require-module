@@ -10,9 +10,9 @@ Replacement for node.js ```require``` that always reads the required module agai
 * Are you tired of having to restart your node server everytime you make a change to your server code?
 * Is code (such as request handlers) in your modules usually pure functions?
 
-If so, then ```re-require``` is an easy, simple and lightweight way for you to achieve 'hot' style code reloading. 
+If so, then ```re-require2``` is an easy, simple and lightweight way for you to achieve 'hot' style code reloading. 
 
-The way ```re-require``` works is it just uncaches the module you give it, before returning what you'd usually get out of ```require```. This way whatever change you make is always loaded at the point in code that you ```re-require``` it.
+The way ```re-require2``` works is it just uncaches the module you give it, before returning what you'd usually get out of ```require```. This way whatever change you make is always loaded at the point in code that you ```reRequire``` it.
 
 When using it, the key thing to make it work is that, you must put the ```reRequire``` call somewhere where it will be called each time a request is made.
 
@@ -20,18 +20,18 @@ Also note that if your module has state inside, the state will be wiped out on `
 
 ## Production Ready
 
-You can actually leave your ```reRequire``` call in production. ```re-require``` detects that if in production mode, it will not reload code and will hit the disk only on the first ```reRequire``` call.
+You can actually leave your ```reRequire``` call in production. ```re-require2``` detects that if in production mode, it will not reload code and will hit the disk only on the first ```reRequire``` call.
 
 ## Install
 
-```npm install re-require --save```
+```npm install re-require2 --save```
 
 ## Example Usage
 
 ```
 // app.js
 var http = require('http');
-var reRequire = require('re-require').reRequire;
+var reRequire = require('re-require2').reRequire;
 
 var server = http.createServer(function(req, res) {
   // put reRequire in here so that a reRequire is made on each request
