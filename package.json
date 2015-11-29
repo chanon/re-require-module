@@ -1,6 +1,6 @@
 {
   "name": "re-require-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Replacement for node.js require that that always reads the required module again from disk. It actually automatically uncaches it before requiring it again for you. This allows changes to become live without restarting node. It is like a simple hot require.",
   "main": "index.js",
   "scripts": {
@@ -23,8 +23,8 @@
     "node_modules",
     "modules",
     "decache",
-	"require-reload",
-	"reload"
+    "require-reload",
+    "reload"
   ],
   "author": "Chanon Sajjamanochai <chanon.s@gmail.com>",
   "license": "MIT",
