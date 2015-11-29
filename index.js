@@ -56,9 +56,12 @@ module.exports.reRequire = function (moduleName) {
 		testRelativePath = testRelativePath + '.js';
 	}
 
-	var modulePath = moduleName;
+	var modulePath;
 	if (existsCached(testRelativePath)) {
 		modulePath = testRelativePath;
+	}
+	else {
+		modulePath = require.resolve(moduleName);
 	}
 
 	// for development mode, we delete the cached module
